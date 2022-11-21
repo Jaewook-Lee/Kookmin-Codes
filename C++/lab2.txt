@@ -1,0 +1,7 @@
+triangle 20.00 40.00
+rectangle 40.00 80.00
+circle 50.00
+rectangle 30.00 60.00
+triangle 10.00 20.00
+triangle 50.00 30.00
+circle 20.00

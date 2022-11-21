@@ -1,0 +1,9 @@
+Actually I should (because RPN allows multidigit numbers) say that in RPN it is 7↓8-9- where ↓ indicates the "push" operation
+
+You must be thinking about it wrong, but it isn't that complicated.
+Step 1: Write canonical infix making all parentheses explicit: (7-8)-9
+Step 2: Move each operator to postfix position: (78-)9-. Step 3: Remove parentheses: 78-9-
+
+Note that the reason that postfix notation is defined to require a stack, is that with a queue you would always perform operations from left to right: 7↓8-9- and 7↓8↓9-- are evaluated the same. With the stack, you can implement any precedence of operations, making it possible to evaluate expressions like (a+b)/(c-d) which simply would be impossible with a queue (with the stack, enter a↓b+c↓d-/
+
+-Ben Vogit, stackoverflow
