@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Let's make my object!</title>
+        <script>
+            function Account(owner, code, balance) {
+                this.owner = owner;
+                this.code = code;
+                this.balance = balance;
+
+                this.inquiry = function() { return this.balance; }
+                this.deposit = function(money) { this.balance += money; }
+                this.withdraw = function(money) {
+                    this.balance -= money;
+                    return money;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            var account = new Account("이재욱", "20181670", 65000);
+            document.write("Account: ");
+            document.write(account.owner + ", ");
+            document.write(account.code + ", ");
+            document.write(account.balance + "<br>");
+
+            account.deposit(10000);
+            document.write("Now, my balance is " + account.inquiry() + "<br>");
+            account.withdraw(7000);
+            document.write("Now, my balance is " + account.inquiry() + "<br>");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>익명 함수</title>
+        <script>
+            var p;
+            function init() {
+                p = document.getElementById("p");
+                p.onmouseover = function() {this.style.backgroundColor = "orchid";}
+                p.addEventListener("mouseout", function() {this.style.backgroundColor="white";})
+            }
+        </script>
+    </head>
+    <body onload="init()">
+        <p id="p">마우스 올리면 orchid 색으로 변경</p>
+    </body>
+</html>

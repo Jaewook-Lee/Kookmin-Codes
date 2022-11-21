@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+    <head><title>Event object 전달받기</title></head>
+    <body>
+        <p id="p">마우스 올려봐.</p>
+        <button onclick="f(event)">클릭하세요</button>
+        <script>
+            function f(e) {
+                alert(e.type);
+            }
+            document.getElementById("p").onmouseover = f;
+        </script>
+    </body>
+</html>

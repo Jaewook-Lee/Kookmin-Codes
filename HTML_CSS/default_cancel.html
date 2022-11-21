@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Cancel Event Property</title>
+        <script>
+            function query() {
+                var ret = confirm("Move to NAVER?");
+                return ret;
+            }
+            function noAction(e) {
+                e.preventDefault();
+            }
+        </script>
+    </head>
+    <body>
+        <a href="https://www.naver.com" onclick="return query()">네이버로 이동할 지 물어보는 링크</a>
+        <form>
+            <input type="checkbox">빵<br>
+            <input type="checkbox" onclick="noAction(event)">술(선택 불가)
+        </form>
+    </body>
+</html>

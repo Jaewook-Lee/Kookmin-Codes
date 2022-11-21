@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head><title>가입 폼</title></head>
+    <body>
+        <h1>가입 폼</h1>
+        <hr>
+        <form name="login" method="GET">
+            거주 국가 : <input type="text" list="countries"><br><br>
+            <datalist id="countries">
+                <option value="대한민국">
+                <option value="일본">
+                <option value="미국">
+                <option value="중국">
+                <option value="기타 지역">
+            </datalist>
+
+            <label>사용자 ID : <input type="text" size="15" placeholder="ID"></label><br>
+            <label for="pass">비밀 번호 : </label>
+            <input id="pass" type="password" size="15" placeholder="PW"><br>
+            <label for="mail">이메일 : </label>
+            <input id="mail" type="email" placeholder="id@host"><br>
+            <label for="phone">휴대폰 번호 : </label>
+            <input id="phone" type="tel" placeholder="010-1234-5678"><br><br>
+
+            가입 목적<br>
+            <input type="checkbox" value="1">학업<br>
+            <input type="checkbox" value="2" checked>취미<br>
+            <input type="checkbox" value="3">기타<br><br>
+            연령<br>
+            <input type="radio" name="age" value="1">10대<br>
+            <input type="radio" name="age" value="2">20대<br>
+            <input type="radio" name="age" value="3">30대<br>
+            <input type="radio" name="age" value="4">40대<br>
+            <input type="radio" name="age" value="5">50대<br>
+            <input type="radio" name="age" value="6">기타<br><br>
+            생일<br>
+            <input type="date" value="2019-01-01"><br><br>
+            친구 추천 여부<br>
+            <select name="friend">
+                <option value="0">추천 받음</option>
+                <option value="1" selected>추천 받지 않음</option>
+            </select>
+            추천인 검색 : <input type="search" placeholder="추천인 이름">
+            <input type="button" value="검색"><br><br>
+            네임 태그 색깔<br>
+            <input type="color" value="#000000"><br><br>
+            알림 지속 시간<br>
+            <input type="number" min="0" max="10" step="1"><br>
+            0h <input type="range" min="0" max="10"> 10h<br><br>
+            <input type="submit" value="회원 가입">
+        </form>
+    </body>
+</html>

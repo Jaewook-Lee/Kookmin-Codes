@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>문서 동적 구성</title>
+        <script>
+            function createDIV() {
+                var obj = document.getElementById("parent");
+                var newDIV = document.createElement("div");
+                newDIV.innerHTML = "새로 생성된 DIV입니다.";
+                newDIV.setAttribute("id", "myDiv");
+                newDIV.style.backgroundColor = "yellow";
+                newDIV.onclick = function () {
+                    var p = this.parentElement;
+                    p.removeChild(this);
+                };
+                obj.appendChild(newDIV);
+            }
+        </script>
+    </head>
+    <body id="parent">
+        <p>
+            DIV 객체를 동적으로 삽입 가능!
+            <a href="javascript:createDIV()">DIV 생성</a>
+        </p>
+    </body>
+</html>

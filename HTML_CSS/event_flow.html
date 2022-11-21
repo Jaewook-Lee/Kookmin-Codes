@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+    <head><title>Event Flow</title></head>
+    <body>
+        <p style="color: blue">이것은 <span>문장입니다.</span></p>
+        <form>
+            <input type="text" name="s">
+            <input type="button" value="테스트" id="button">
+        </form>
+        <div id="div" style="color: green"></div>
+        
+        <script>
+            var div = document.getElementById("div");
+            var button = document.getElementById("button");
+            document.body.addEventListener("click", capture, true); // Capture Listener
+            button.addEventListener("click", bubble, false); // Bubble Listener
+            document.body.addEventListener("click", bubble, false) // Bubble Listener
+
+            function capture(e) {
+                var obj = e.currentTarget;
+                var tagName = obj.tagName;
+                div.innerHTML += "<br>Capture 단계-> " + tagName + " 태그, " + e.type + " 이벤트";
+            }
+            function bubble(e) {
+                var obj = e.currentTarget;
+                var tagName = obj.tagName;
+                div.innerHTML += "<br>Bubble 단계-> " + tagName + " 태그, " + e.type + " 이벤트";
+            }
+        </script>
+    </body>
+</html>

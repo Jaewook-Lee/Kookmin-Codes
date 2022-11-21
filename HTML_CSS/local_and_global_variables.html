@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Local and Global variable</title></head>
+    <body>
+        <script>
+            var x = 100;
+            function f() {
+                var x = 1;
+
+                document.write("Local x = " + x);
+                document.write("<br>");
+                document.write("Global x = " + this.x);
+            }
+
+            f();
+        </script>
+    </body>
+</html>
